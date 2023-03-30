@@ -1,0 +1,286 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.apo.etito"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:6:5-80
+11-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:6:22-77
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:7:5-81
+12-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:7:22-78
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:8:5-67
+13-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:8:22-64
+14
+15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+16    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
+17-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:25:22-76
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:25:5-68
+18-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:25:22-65
+19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+19-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:26:5-110
+19-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:26:22-107
+20    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+20-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:26:5-82
+20-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:26:22-79
+21
+22    <application
+22-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:10:5-44:19
+23        android:allowBackup="true"
+23-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:12:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\b6b5951a20836cbe843a8e306a5032d5\core-1.1.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/etito_"
+26-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:13:9-38
+27        android:label="@string/app_name"
+27-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:14:9-41
+28        android:roundIcon="@mipmap/etito__round"
+28-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:15:9-49
+29        android:supportsRtl="true"
+29-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:16:9-35
+30        android:testOnly="true"
+31        android:theme="@style/AppTheme" >
+31-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:17:9-40
+32        <activity android:name="com.apo.etito.ForgotAndChangePasswordActivity" />
+32-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:18:9-78
+32-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:18:19-66
+33        <activity android:name="com.apo.etito.AdminUserProductsActivity" />
+33-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:19:9-63
+33-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:19:19-60
+34        <activity android:name="com.apo.etito.AdminNewOrdersActivity" />
+34-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:20:9-60
+34-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:20:19-57
+35        <activity android:name="com.apo.etito.ConfirmFinalOrderActivity" />
+35-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:21:9-63
+35-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:21:19-60
+36        <activity android:name="com.apo.etito.CartActivity" />
+36-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:22:9-50
+36-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:22:19-47
+37        <activity android:name="com.apo.etito.ProductDetailsActivity" />
+37-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:23:9-60
+37-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:23:19-57
+38        <activity
+38-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:24:9-27:59
+39            android:name="com.apo.etito.HomeActivity"
+39-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:25:13-41
+40            android:label="@string/title_activity_home"
+40-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:26:13-56
+41            android:theme="@style/AppTheme.NoActionBar" />
+41-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:27:13-56
+42        <activity android:name="com.apo.etito.SettingsActivity" />
+42-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:28:9-54
+42-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:28:19-51
+43        <activity android:name="com.apo.etito.AdminCategoryActivity" />
+43-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:29:9-59
+43-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:29:19-56
+44        <activity android:name="com.apo.etito.AdminLoginActivity" />
+44-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:30:9-56
+44-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:30:19-53
+45        <activity android:name="com.apo.etito.AdminAddNewProductActivity" />
+45-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:31:9-64
+45-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:31:19-61
+46        <activity android:name="com.apo.etito.RegisterActivity" />
+46-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:32:9-54
+46-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:32:19-51
+47        <activity android:name="com.apo.etito.LoginActivity" />
+47-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:33:9-51
+47-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:33:19-48
+48        <activity android:name="com.apo.etito.MainActivity" >
+48-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:34:9-40:20
+48-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:34:19-47
+49            <intent-filter>
+49-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:35:13-39:29
+50                <action android:name="android.intent.action.MAIN" />
+50-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:36:17-69
+50-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:36:25-66
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+52-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:38:17-77
+52-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:38:27-74
+53            </intent-filter>
+54        </activity>
+55        <activity
+55-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:41:9-43:59
+56            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+56-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:42:13-76
+57            android:theme="@style/Base.Theme.AppCompat" />
+57-->C:\Users\SamDu\OneDrive\Documents\CS533-740 Mobile Computing\eTito-master\eTito-master\app\src\main\AndroidManifest.xml:43:13-56
+58
+59        <service
+59-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:29:9-35:19
+60            android:name="com.google.firebase.components.ComponentDiscoveryService"
+60-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:30:13-84
+61            android:directBootAware="true"
+61-->[com.google.firebase:firebase-common:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\1c539ef2bb3996784245d4ef95a5e9fb\firebase-common-19.2.0\AndroidManifest.xml:15:13-43
+62            android:exported="false" >
+62-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:31:13-37
+63            <meta-data
+63-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:32:13-34:85
+64                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+64-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:33:17-109
+65                android:value="com.google.firebase.components.ComponentRegistrar" />
+65-->[com.google.firebase:firebase-database:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\85c87406a1ed993b98ca8bffae341a54\firebase-database-19.2.0\AndroidManifest.xml:34:17-82
+66            <meta-data
+66-->[com.google.firebase:firebase-storage:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\bcdf615694a8182e986fae1018adaadc\firebase-storage-19.1.0\AndroidManifest.xml:33:13-35:85
+67                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+67-->[com.google.firebase:firebase-storage:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\bcdf615694a8182e986fae1018adaadc\firebase-storage-19.1.0\AndroidManifest.xml:34:17-107
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[com.google.firebase:firebase-storage:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\bcdf615694a8182e986fae1018adaadc\firebase-storage-19.1.0\AndroidManifest.xml:35:17-82
+69            <meta-data
+69-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:36:13-38:85
+70                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+70-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:37:17-109
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:38:17-82
+72            <meta-data
+72-->[com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\d4c90997e1e18281c74dec99208f9d9f\play-services-measurement-api-17.2.1\AndroidManifest.xml:30:13-32:85
+73                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+73-->[com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\d4c90997e1e18281c74dec99208f9d9f\play-services-measurement-api-17.2.1\AndroidManifest.xml:31:17-139
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\d4c90997e1e18281c74dec99208f9d9f\play-services-measurement-api-17.2.1\AndroidManifest.xml:32:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:32:13-34:85
+76                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+76-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:33:17-96
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:34:17-82
+78        </service>
+79
+80        <provider
+80-->[com.squareup.picasso:picasso:2.71828] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e9cded38f3a80df28d167dfe8d6ce118\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+81            android:name="com.squareup.picasso.PicassoProvider"
+81-->[com.squareup.picasso:picasso:2.71828] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e9cded38f3a80df28d167dfe8d6ce118\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+82            android:authorities="com.apo.etito.com.squareup.picasso"
+82-->[com.squareup.picasso:picasso:2.71828] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e9cded38f3a80df28d167dfe8d6ce118\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+83            android:exported="false" />
+83-->[com.squareup.picasso:picasso:2.71828] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e9cded38f3a80df28d167dfe8d6ce118\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+84
+85        <activity
+85-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:24:9-31:50
+86            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+86-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:25:13-85
+87            android:excludeFromRecents="true"
+87-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:26:13-46
+88            android:exported="true"
+88-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:27:13-36
+89            android:launchMode="singleTask"
+89-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:28:13-44
+90            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+90-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:29:13-102
+91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+91-->[com.google.firebase:firebase-auth:19.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\e94d4c46262c04452ee9877596073b58\firebase-auth-19.1.0\AndroidManifest.xml:30:13-72
+92
+93        <receiver
+93-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:29:9-33:20
+94            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+94-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:30:13-85
+95            android:enabled="true"
+95-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:31:13-35
+96            android:exported="false" >
+96-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:32:13-37
+97        </receiver>
+98        <receiver
+98-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:34:9-42:20
+99            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+99-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:35:13-100
+100            android:enabled="true"
+100-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:36:13-35
+101            android:exported="true"
+101-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:37:13-36
+102            android:permission="android.permission.INSTALL_PACKAGES" >
+102-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:38:13-69
+103            <intent-filter>
+103-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:39:13-41:29
+104                <action android:name="com.android.vending.INSTALL_REFERRER" />
+104-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:40:17-79
+104-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:40:25-76
+105            </intent-filter>
+106        </receiver>
+107
+108        <service
+108-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:44:9-47:40
+109            android:name="com.google.android.gms.measurement.AppMeasurementService"
+109-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:45:13-84
+110            android:enabled="true"
+110-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:46:13-35
+111            android:exported="false" />
+111-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:47:13-37
+112        <service
+112-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:48:9-52:72
+113            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+113-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:49:13-87
+114            android:enabled="true"
+114-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:50:13-35
+115            android:exported="false"
+115-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:51:13-37
+116            android:permission="android.permission.BIND_JOB_SERVICE" />
+116-->[com.google.android.gms:play-services-measurement:17.2.1] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\7dd6a7e7c23ec194c2e6b0a5648ddea9\play-services-measurement-17.2.1\AndroidManifest.xml:52:13-69
+117
+118        <receiver
+118-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:37:9-44:20
+119            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+119-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:38:13-78
+120            android:exported="true"
+120-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:39:13-36
+121            android:permission="com.google.android.c2dm.permission.SEND" >
+121-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:40:13-73
+122            <intent-filter>
+122-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:41:13-43:29
+123                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+123-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:42:17-81
+123-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\856a947c1a9c6ebc4d2fc0c2fb4dbece\firebase-iid-19.0.0\AndroidManifest.xml:42:25-78
+124            </intent-filter>
+125        </receiver>
+126
+127        <provider
+127-->[com.google.firebase:firebase-common:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\1c539ef2bb3996784245d4ef95a5e9fb\firebase-common-19.2.0\AndroidManifest.xml:19:9-23:39
+128            android:name="com.google.firebase.provider.FirebaseInitProvider"
+128-->[com.google.firebase:firebase-common:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\1c539ef2bb3996784245d4ef95a5e9fb\firebase-common-19.2.0\AndroidManifest.xml:20:13-77
+129            android:authorities="com.apo.etito.firebaseinitprovider"
+129-->[com.google.firebase:firebase-common:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\1c539ef2bb3996784245d4ef95a5e9fb\firebase-common-19.2.0\AndroidManifest.xml:21:13-72
+130            android:exported="false"
+130-->[com.google.firebase:firebase-common:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\1c539ef2bb3996784245d4ef95a5e9fb\firebase-common-19.2.0\AndroidManifest.xml:22:13-37
+131            android:initOrder="100" />
+131-->[com.google.firebase:firebase-common:19.2.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\1c539ef2bb3996784245d4ef95a5e9fb\firebase-common-19.2.0\AndroidManifest.xml:23:13-36
+132
+133        <activity
+133-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\26923404d8e377cf48027104175cd048\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+134            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+134-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\26923404d8e377cf48027104175cd048\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+135            android:exported="false"
+135-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\26923404d8e377cf48027104175cd048\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+136            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+136-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\26923404d8e377cf48027104175cd048\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+137
+138        <meta-data
+138-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\d4ae22f27f094d1f95c074fe429ee093\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+139            android:name="com.google.android.gms.version"
+139-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\d4ae22f27f094d1f95c074fe429ee093\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+140            android:value="@integer/google_play_services_version" />
+140-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\d4ae22f27f094d1f95c074fe429ee093\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+141
+142        <provider
+142-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\c292ecb9a8de3ae719de415b6368ee80\lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+143            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+143-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\c292ecb9a8de3ae719de415b6368ee80\lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+144            android:authorities="com.apo.etito.lifecycle-process"
+144-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\c292ecb9a8de3ae719de415b6368ee80\lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+145            android:exported="false"
+145-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\c292ecb9a8de3ae719de415b6368ee80\lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+146            android:multiprocess="true" />
+146-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\SamDu\.gradle\caches\transforms-2\files-2.1\c292ecb9a8de3ae719de415b6368ee80\lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+147    </application>
+148
+149</manifest>

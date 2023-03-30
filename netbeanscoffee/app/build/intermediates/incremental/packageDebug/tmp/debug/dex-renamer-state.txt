@@ -1,0 +1,7 @@
+#Wed Mar 22 19:58:58 CDT 2023
+base.0=C\:\\Users\\SamDu\\OneDrive\\Documents\\CS533-740 Mobile Computing\\eTito-master\\eTito-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\SamDu\\OneDrive\\Documents\\CS533-740 Mobile Computing\\eTito-master\\eTito-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
