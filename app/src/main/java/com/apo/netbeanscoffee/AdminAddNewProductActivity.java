@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.apo.netbeanscoffee.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -56,7 +55,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
         productImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         productsRef = FirebaseDatabase.getInstance().getReference().child("Products");
         addNewProductButton = (Button) findViewById(R.id.add_new_product);
-        inputProductImage = (ImageView) findViewById(R.id.select_product_image);
+        inputProductImage = (ImageView) findViewById(R.id.background2);
         inputProductName = (EditText) findViewById(R.id.product_name);
         inputProductDescription = (EditText) findViewById(R.id.product_description);
         inputProductPrice = (EditText) findViewById(R.id.product_price);

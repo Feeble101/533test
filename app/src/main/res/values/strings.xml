@@ -3,10 +3,10 @@
     <string name="sign_up">Sign-Up</string>
     <string name="email_address">Email Address</string>
     <string name="sign_in">Sign-In</string>
-    <string name="forget_password">Forgot or Change Password?</string>
+    <string name="forget_password">Change Password?</string>
     <string name="remember_me">Remember Me</string>
     <string name="password">Password</string>
-    <string name="account_already_exists_sign_in">User exists? Sign-in</string>
+    <string name="account_already_exists_sign_in">Sign-in</string>
     <string name="i_am_an_admin">I am an Admin</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -17,8 +17,8 @@
 
     <string name="i_am_not_an_admin">I am not an Admin</string>
     <string name="admin_sign_in">Admin Sign-in</string>
-    <string name="already_admin_sign_in">Already Admin? Sign-in</string>
-    <string name="please_register">Please Register</string>
+    <string name="already_admin_sign_in">Admin Sign-in</string>
+    <string name="please_register">Register</string>
     <string name="user_sign_up">User Sign-Up</string>
     <string name="admin_sign_up">Admin Sign-Up</string>
     <string name="add_new_product">Add New Product</string>

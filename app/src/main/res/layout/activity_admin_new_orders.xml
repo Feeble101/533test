@@ -10,19 +10,17 @@
         android:id="@+id/r2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/colorPrimaryDark"
         android:layout_alignParentTop="true"
-        >
+        android:background="@color/colorPrimary">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/new_orders"
-            android:textColor="@android:color/white"
-            android:textSize="25dp"
-            android:textAlignment="center"
             android:layout_marginTop="10dp"
-            />
+            android:text="@string/new_orders"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
 
     </RelativeLayout>
 
