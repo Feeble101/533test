@@ -47,13 +47,13 @@
     <string name="_product_name">Product Name</string>
     <string name="_product_description">Product Description</string>
     <string name="next">Next</string>
-    <string name="total_price">Total Price =</string>
+    <string name="total_price">Order Details</string>
     <string name="other_pname">Product Name</string>
     <string name="product_quantity">Product Quantity</string>
     <string name="p_price">Product Price</string>
-    <string name="please_confirm_your_shipment_details">Please write your Shipment Details</string>
-    <string name="your_name">Your Name</string>
-    <string name="your_phone_number">Your Phone Number</string>
+    <string name="please_confirm_your_shipment_details">Please Input Your Shipment Details</string>
+    <string name="your_name">Name</string>
+    <string name="your_phone_number">Phone Number</string>
     <string name="confirm">Confirm</string>
     <string name="new_orders">New Orders</string>
     <string name="username">UserName</string>

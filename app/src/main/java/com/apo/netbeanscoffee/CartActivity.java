@@ -61,14 +61,14 @@ public class CartActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 try {
-                    txtTotalAmount.setText("Total Price = R" + String.valueOf(overTotalPrice));
+                    txtTotalAmount.setText("Order Details");
 
                 } catch (NumberFormatException e){
                     return;
                 }
 //                txtTotalAmount.setText("Total Price = R" + String.valueOf(overTotalPrice));
                 Intent intent = new Intent(CartActivity.this,ConfirmFinalOrderActivity.class);
-                intent.putExtra("Total Price",String.valueOf(overTotalPrice));
+                intent.putExtra("Order Details",String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
             }
@@ -97,7 +97,7 @@ public class CartActivity extends AppCompatActivity {
 
 
                             cartViewHolder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
-                            cartViewHolder.txtProductPrice.setText("Price = R" + model.getPrice());
+                            cartViewHolder.txtProductPrice.setText("Price = " + model.getPrice());
                             cartViewHolder.txtProductName.setText(model.getPname());
 
 
@@ -190,19 +190,19 @@ public class CartActivity extends AppCompatActivity {
 
                             if (shippingState.equals("shipped")){
 
-                                txtTotalAmount.setText("Dear " + userName + "\n order is shipped successfully.");
+                                txtTotalAmount.setText("Dear " + userName + "\n your order has been shipped successfully.");
                                 recyclerView.setVisibility(View.GONE);
                                 txtMsg1.setVisibility(View.VISIBLE);
-                                txtMsg1.setText("Congratulations, your final order has been Shipped successfully.Soon you will receive your order by your door step ");
+                                txtMsg1.setText("Your order has been shipped to the provided address. Thank you for doing business with Netbeans Coffee!");
                                 nextProcessBtn.setVisibility(View.GONE);
-                                Toast.makeText(CartActivity.this, "You can purchase more products once you receive your first order", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CartActivity.this, "You can order again once your previous order has arrived.", Toast.LENGTH_SHORT).show();
 
                             } else if (shippingState.equals("not shipped")){
                                 txtTotalAmount.setText("Shipping State = not shipped");
                                 recyclerView.setVisibility(View.GONE);
                                 txtMsg1.setVisibility(View.VISIBLE);
                                 nextProcessBtn.setVisibility(View.GONE);
-                                Toast.makeText(CartActivity.this, "You can purchase more products once you receive your first order", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CartActivity.this, "You can order again once your previous order has arrived.", Toast.LENGTH_SHORT).show();
 
 
                             }

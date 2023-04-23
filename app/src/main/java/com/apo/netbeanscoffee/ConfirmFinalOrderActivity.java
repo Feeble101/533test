@@ -33,8 +33,10 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_final_order);
 
-        totalAmount = getIntent().getStringExtra("Total Price");
-        Toast.makeText(this, "Total Price = R" + totalAmount, Toast.LENGTH_SHORT).show();
+        //totalAmount = getIntent().getStringExtra("Total Price");
+        //Toast.makeText(this, "Total Price = " + totalAmount, Toast.LENGTH_SHORT).show();
+        totalAmount = getIntent().getStringExtra("Order Details");
+        Toast.makeText(this, "Order Details", Toast.LENGTH_SHORT).show();
 
         confirmOrderBtn = (Button) findViewById(R.id.confirm_final_order);
         nameEditText = (EditText) findViewById(R.id.shipment_name);
@@ -64,7 +66,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
             Toast.makeText(this, "Please provide your address", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(cityEditText.getText().toString())){
-            Toast.makeText(this, "Please provide your city name ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please provide your city and state ", Toast.LENGTH_SHORT).show();
         }
 
         else{
@@ -108,7 +110,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(ConfirmFinalOrderActivity.this, "your final order has been placed successfully", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ConfirmFinalOrderActivity.this, "your order has been placed successfully", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(ConfirmFinalOrderActivity.this,HomeActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);

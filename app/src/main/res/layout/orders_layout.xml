@@ -82,7 +82,7 @@
             android:layout_marginRight="20dp"
             android:background="@android:color/white"
             android:text="Show this order products"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorPrimary"
             android:textSize="18dp" />
 
 

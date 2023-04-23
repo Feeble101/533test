@@ -59,7 +59,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Your Home City"
+        android:hint="City, State"
         />
 
     <Button
