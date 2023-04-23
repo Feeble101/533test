@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="cups" type="id" />
+    <item name="creamer" type="id" />
+    <item name="bagged_beans" type="id" />
+    <item name="combos" type="id" />
+    <item name="shirts" type="id" />
+    <item name="gift_cards" type="id" />
+</resources>
