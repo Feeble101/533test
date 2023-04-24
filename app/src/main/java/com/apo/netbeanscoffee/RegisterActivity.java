@@ -84,7 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()){
-                                                       Toast.makeText(RegisterActivity.this,"Congratulations your account has been created successfully",Toast.LENGTH_LONG).show();
+                                                       Toast.makeText(RegisterActivity.this,"Your account has been created successfully",Toast.LENGTH_LONG).show();
                                                        loadingBar.dismiss();
                                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                                        startActivity(intent);
@@ -131,7 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
 
-                                                Toast.makeText(RegisterActivity.this, "Congratulations, Admin Account has been created successfully", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(RegisterActivity.this, "Admin Account has been created successfully", Toast.LENGTH_LONG).show();
                                                 loadingBar.dismiss();
                                                 Intent intent = new Intent(RegisterActivity.this, AdminLoginActivity.class);
                                                 startActivity(intent);
