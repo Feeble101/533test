@@ -16,7 +16,7 @@
         android:layout_marginBottom="15dp"
         android:text="@string/please_confirm_your_shipment_details"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/netbeans__background"
         android:textSize="18dp"
         android:textStyle="bold" />
     <EditText

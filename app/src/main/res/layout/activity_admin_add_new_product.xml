@@ -7,9 +7,9 @@
     tools:context="com.apo.netbeanscoffee.AdminAddNewProductActivity">
 
     <ImageView
-        android:id="@+id/background2"
-        android:layout_width="wrap_content"
-        android:layout_height="382dp"
+        android:id="@+id/homepage"
+        android:layout_width="307dp"
+        android:layout_height="274dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:cropToPadding="false"
@@ -20,7 +20,7 @@
         android:id="@+id/product_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/background2"
+        android:layout_below="@+id/homepage"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="45dp"
