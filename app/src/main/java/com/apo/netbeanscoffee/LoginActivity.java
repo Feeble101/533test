@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnSigIn, btnChangePassword;
     private ProgressDialog loadingBar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         inputPassword = (EditText) findViewById(R.id.login_input_password);
         btnSigIn = (Button) findViewById(R.id.sign_in_btn);
         btnChangePassword =(Button) findViewById(R.id.forgot_or_change__password_btn);
-
-
-
 
         btnSigIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,15 +79,11 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,"All fields are mandatory",Toast.LENGTH_LONG).show();
                     }
 
-
-
                 } catch (Exception e){
                     e.printStackTrace();
                 }
             }
         });
-
-
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

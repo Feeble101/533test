@@ -22,12 +22,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import Model.Users;
 
 public class RegisterActivity extends AppCompatActivity {
-    private EditText inputEmail, inputPassword;
+
     private FirebaseAuth auth;
     private ProgressDialog loadingBar;
     private Button btnSignUp;
     private Button btnAdminSignUp;
-
+    private EditText inputEmail, inputPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
         loadingBar.setCanceledOnTouchOutside(false);
 
         auth = FirebaseAuth.getInstance();
-
-//        if (auth.getCurrentUser()!= null){
-//            startActivity(new Intent(RegisterActivity.this,MainActivity.class));
-//            finish();
-//        }
 
         inputEmail = (EditText) findViewById(R.id.register_input_email);
         inputPassword = (EditText) findViewById(R.id.register_input_password);
@@ -65,17 +60,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
-//                                        if (!task.isSuccessful()) {
-//                                            Toast.makeText(RegisterActivity.this, "Authentication Failed", Toast.LENGTH_LONG
-//                                            ).show();
-//                                            Log.v("error", task.getResult().toString());
-//                                        } else {
-//                                            Toast.makeText(RegisterActivity.this,"Congratulations your account has been created successfully",Toast.LENGTH_LONG).show();
-//                                            loadingBar.dismiss();
-//                                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-//                                            startActivity(intent);
-//                                            finish();
-//                                        }
                                         if (task.isSuccessful()){
                                             Users users = new Users(email,password);
                                             FirebaseDatabase.getInstance().getReference("Users")
@@ -91,12 +75,10 @@ public class RegisterActivity extends AppCompatActivity {
                                                     } else {
                                                         Toast.makeText(RegisterActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                                                     }
-
                                                 }
                                             });
 
                                         }
-
                                         loadingBar.dismiss();
                                     }
                                 });
@@ -157,8 +139,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }
 

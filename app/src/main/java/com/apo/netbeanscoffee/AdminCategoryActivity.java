@@ -75,7 +75,6 @@ public class AdminCategoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
                 intent.putExtra("category","Creamer");
                 startActivity(intent);
-
             }
         });
 

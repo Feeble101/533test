@@ -5,12 +5,6 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_category">
 
-<!--    <fragment-->
-<!--        android:id="@+id/nav_home"-->
-<!--        android:name="com.apo.etito.ui.home.HomeFragment"-->
-<!--        android:label="@string/menu_home"-->
-<!--        tools:layout="@layout/fragment_home" />-->
-
     <fragment
         android:id="@+id/nav_cart"
         android:name="com.apo.netbeanscoffee.ui.gallery.GalleryFragment"
@@ -40,6 +34,5 @@
         android:name="com.apo.netbeanscoffee.ui.share.ShareFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_share" />
-
 
 </navigation>

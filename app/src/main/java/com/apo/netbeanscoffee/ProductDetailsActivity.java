@@ -31,15 +31,11 @@ import Model.Products;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
-
-
-    private Button addToCartButton;
-    private ImageView productImage;
     private ElegantNumberButton numberButton;
     private TextView productPrice, productDescription,productName;
     private String productID = "", state = "Normal";
-
-
+    private Button addToCartButton;
+    private ImageView productImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,8 +84,6 @@ public class ProductDetailsActivity extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(calForDate.getTime());
 
-
-
             final HashMap<String,Object> cartMap = new HashMap<>();
             cartMap.put("pid",productID);
             cartMap.put("pname",productName.getText().toString());
@@ -121,19 +115,11 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                                 }
                                             }
                                         });
-
-
-
                             }
                         }
                     });
 
         }
-
-
-
-
-
 
     private void getProductDetails(String productID) {
 
@@ -175,12 +161,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
                             } else if (shippingState.equals("not shipped")){
 
                                 state = "Order Placed";
-
-
                             }
-
                         }
-
                     }
 
                     @Override
@@ -188,7 +170,5 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
                     }
                 });
-
     }
-
 }

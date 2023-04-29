@@ -35,8 +35,6 @@ public class AdminUserProductsActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         productsList.setLayoutManager(layoutManager);
 
-
-
         FirebaseDatabase.getInstance()
                 .getReference("CartList").child("AdminView").child(userId).child("Products");
     }
@@ -57,8 +55,6 @@ public class AdminUserProductsActivity extends AppCompatActivity {
                 cartViewHolder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
                 cartViewHolder.txtProductPrice.setText("Price = $" + model.getPrice());
                 cartViewHolder.txtProductName.setText(model.getPname());
-
-
             }
 
             @NonNull
@@ -67,7 +63,6 @@ public class AdminUserProductsActivity extends AppCompatActivity {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_items_layout,parent,false);
                 CartViewHolder holder = new CartViewHolder(view);
                 return holder;
-
             }
         };
 

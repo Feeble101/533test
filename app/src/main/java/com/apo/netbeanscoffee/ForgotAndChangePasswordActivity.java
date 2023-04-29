@@ -27,10 +27,6 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
     private ProgressDialog PD;
     private TextInputLayout labelMode;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,14 +61,12 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
             txtMode.setText("Delete User");
             edtMode.setVisibility(View.GONE);
         }
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 callFunction(mode);
             }
         });
-
     }
 
     private void callFunction(int mode) {
@@ -94,7 +88,6 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
                             Toast.makeText(ForgotAndChangePasswordActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                         }
                         PD.dismiss();
-
                     }
                 });
             }
@@ -155,8 +148,5 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
                         });
             }
         }
-
-
-
     }
 }

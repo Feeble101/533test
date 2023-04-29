@@ -35,16 +35,17 @@ import java.util.HashMap;
 
 public class AdminAddNewProductActivity extends AppCompatActivity {
 
-    private String categoryName, description, price, pname,saveCurrentDate, saveCurrentTime;
+    private String productRandomKey,downLoadImageUrl;
+    private StorageReference productImagesRef;
+    private DatabaseReference productsRef;
+    private ProgressDialog loadingBar;
+    private String categoryName, description, price, pname, saveCurrentDate, saveCurrentTime;
     private Button addNewProductButton;
     private ImageView inputProductImage;
     private EditText inputProductName, inputProductDescription, inputProductPrice;
     private static final int GalleryPick = 1;
     private Uri imageUri;
-    private String productRandomKey,downLoadImageUrl;
-    private StorageReference productImagesRef;
-    private DatabaseReference productsRef;
-    private ProgressDialog loadingBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,17 +115,13 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Please write product description...", Toast.LENGTH_SHORT).show();
 
-
         } else if (TextUtils.isEmpty(price)) {
 
             Toast.makeText(this, "Please write product price...", Toast.LENGTH_SHORT).show();
 
-
         } else if (TextUtils.isEmpty(pname)) {
 
             Toast.makeText(this, "Please write product name...", Toast.LENGTH_SHORT).show();
-
-
         }
 
         else{
@@ -169,7 +166,6 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                     public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
                         if (!task.isSuccessful()){
                            throw task.getException();
-
                         }
 
                         downLoadImageUrl = filePath.getDownloadUrl().toString();

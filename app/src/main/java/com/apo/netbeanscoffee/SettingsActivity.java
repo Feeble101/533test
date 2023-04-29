@@ -35,9 +35,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private CircleImageView profileImageView;
     private EditText emailEditText, addressEditText;
     private TextView profileChangeTextBtn, closeTextBtn, saveTextButton;
+    private CircleImageView profileImageView;
 
     private Uri imageUri;
     private String myUrl = "";
@@ -92,14 +92,8 @@ public class SettingsActivity extends AppCompatActivity {
                 CropImage.activity(imageUri)
                         .setAspectRatio(1,1)
                         .start(SettingsActivity.this);
-
-
             }
         });
-
-
-
-
 
     }
 
@@ -111,19 +105,10 @@ public class SettingsActivity extends AppCompatActivity {
          FirebaseDatabase.getInstance().getReference("SettingsUsersInfo")
         .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).updateChildren(userMap);
 
-
-
-
-
-
-
         startActivity(new Intent(SettingsActivity.this,HomeActivity.class));
         Toast.makeText(SettingsActivity.this, "Profile info updated successfully", Toast.LENGTH_SHORT).show();
         finish();
-
-
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -141,7 +126,6 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void userInfoSaved() {
-
         if (TextUtils.isEmpty(emailEditText.getText().toString())){
             Toast.makeText(this, "Name is mandatory", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(addressEditText.getText().toString())){
@@ -187,17 +171,12 @@ public class SettingsActivity extends AppCompatActivity {
                         FirebaseDatabase.getInstance().getReference("SettingsUsersInfo")
                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).updateChildren(userMap);
 
-
                         progressDialog.dismiss();
-
-
 
                         startActivity(new Intent(SettingsActivity.this,HomeActivity.class));
                         Toast.makeText(SettingsActivity.this, "Profile info updated successfully", Toast.LENGTH_SHORT).show();
                         finish();
-
                     }
-
                     else {
                         progressDialog.dismiss();
                         Toast.makeText(SettingsActivity.this, "Error", Toast.LENGTH_SHORT).show();
@@ -210,8 +189,6 @@ public class SettingsActivity extends AppCompatActivity {
             Toast.makeText(SettingsActivity.this, "Image is not selected", Toast.LENGTH_SHORT).show();
 
         }
-
-
     }
 
     private void userInfoDisplay(final CircleImageView profileImageView, final EditText emailEditText, final EditText addressEditText) {
@@ -232,12 +209,7 @@ public class SettingsActivity extends AppCompatActivity {
                         emailEditText.setText(email);
                         addressEditText.setText(address);
 
-
-
-
-
                     }
-
                 }
             }
 

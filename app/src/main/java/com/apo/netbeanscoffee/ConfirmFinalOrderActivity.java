@@ -22,11 +22,10 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 public class ConfirmFinalOrderActivity extends AppCompatActivity {
-    private EditText nameEditText, phoneEditText, addressEditText, cityEditText;
-    private Button confirmOrderBtn;
 
     private String totalAmount = "";
-
+    private EditText nameEditText, phoneEditText, addressEditText, cityEditText;
+    private Button confirmOrderBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +49,6 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
               Check();
             }
         });
-
-
-
     }
 
     private void Check() {
@@ -121,10 +117,5 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
-
     }
 }

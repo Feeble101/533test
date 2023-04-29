@@ -76,8 +76,6 @@ public class AdminLoginActivity extends AppCompatActivity {
                         Toast.makeText(AdminLoginActivity.this,"All fields are mandatory",Toast.LENGTH_LONG).show();
                     }
 
-
-
                 } catch (Exception e){
                     e.printStackTrace();
                 }

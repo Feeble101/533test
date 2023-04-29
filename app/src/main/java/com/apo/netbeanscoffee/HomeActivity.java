@@ -61,9 +61,6 @@ public class HomeActivity extends AppCompatActivity  {
         productsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
         Paper.init(this);
-
-
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
@@ -78,16 +75,8 @@ public class HomeActivity extends AppCompatActivity  {
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-//                this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-//        drawer.addDrawerListener(toggle);
-//        toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_cart, R.id.nav_orders, R.id.nav_category,
                 R.id.nav_settings, R.id.nav_logout)
@@ -100,12 +89,6 @@ public class HomeActivity extends AppCompatActivity  {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-
-//                if (destination.getId() == R.id.nav_home){
-//                    Toast.makeText(HomeActivity.this, "Home", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(com.apo.etito.HomeActivity.this,HomeActivity.class);
-//                    startActivity(intent);
-//                }
 
                 if (destination.getId() == R.id.nav_cart){
                     Toast.makeText(HomeActivity.this, "Cart", Toast.LENGTH_SHORT).show();
@@ -134,7 +117,6 @@ public class HomeActivity extends AppCompatActivity  {
                     finish();
 
                 }
-
             }
         });
 
@@ -176,13 +158,8 @@ public class HomeActivity extends AppCompatActivity  {
                                 Intent intent = new Intent(HomeActivity.this,ProductDetailsActivity.class);
                                 intent.putExtra("pid",model.getPid());
                                 startActivity(intent);
-
                             }
                         });
-
-
-
-
                     }
 
                     @NonNull
@@ -195,8 +172,6 @@ public class HomeActivity extends AppCompatActivity  {
                 };
         recyclerView.setAdapter(adapter);
         adapter.startListening();
-
-
     }
 
     @Override
@@ -228,40 +203,7 @@ public class HomeActivity extends AppCompatActivity  {
         int id = item.getItemId();
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//        int id = menuItem.getItemId();
-//
-//        if (id == R.id.nav_cart){
-//
-//        }
-//
-//        else if (id == R.id.nav_orders){
-//
-//        } else if (id == R.id.nav_category){
-//
-//        } else if (id == R.id.nav_settings){
-//            Intent intent = new Intent(com.apo.etito.HomeActivity.this,SettingsActivity.class);
-//            startActivity(intent);
-//
-//        } else if (id == R.id.nav_logout){
-//
-//            Paper.book().destroy();
-//            Intent intent = new Intent(com.apo.etito.HomeActivity.this,MainActivity.class);
-//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//            startActivity(intent);
-//            finish();
-//
-//        }
-
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
-//        return true;
-    }
+}
 
 
 

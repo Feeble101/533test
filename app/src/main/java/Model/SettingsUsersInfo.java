@@ -4,9 +4,7 @@ public class SettingsUsersInfo {
 
     String email, image, address;
 
-
     public SettingsUsersInfo(){
-
     }
 
     public SettingsUsersInfo(String email, String image, String address) {

@@ -39,9 +39,6 @@ public class CartActivity extends AppCompatActivity {
      private TextView txtTotalAmount, txtMsg1 ;
      private int overTotalPrice = 0;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,14 +63,12 @@ public class CartActivity extends AppCompatActivity {
                 } catch (NumberFormatException e){
                     return;
                 }
-//                txtTotalAmount.setText("Total Price = R" + String.valueOf(overTotalPrice));
                 Intent intent = new Intent(CartActivity.this,ConfirmFinalOrderActivity.class);
                 intent.putExtra("Order Details",String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
             }
         });
-
     }
 
     @Override
@@ -94,22 +89,15 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     protected void onBindViewHolder(@NonNull CartViewHolder cartViewHolder, int position, @NonNull final Cart model) {
                         try {
-
-
                             cartViewHolder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
                             cartViewHolder.txtProductPrice.setText("Price = $" + model.getPrice());
                             cartViewHolder.txtProductName.setText(model.getPname());
-
 
                             int oneTypeTotalProduct = (Integer.valueOf(model.getPrice())) * Integer.valueOf(model.getQuantity());
                             overTotalPrice = overTotalPrice + oneTypeTotalProduct;
                         } catch(NumberFormatException e){
                             return;
                         }
-
-
-
-
 
                         cartViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -158,11 +146,6 @@ public class CartActivity extends AppCompatActivity {
                                 builder.show();
                             }
                         });
-
-
-
-
-
                     }
 
                     @NonNull
@@ -203,12 +186,8 @@ public class CartActivity extends AppCompatActivity {
                                 txtMsg1.setVisibility(View.VISIBLE);
                                 nextProcessBtn.setVisibility(View.GONE);
                                 Toast.makeText(CartActivity.this, "You can order again once your previous order has arrived.", Toast.LENGTH_SHORT).show();
-
-
                             }
-
                         }
-
                     }
 
                     @Override

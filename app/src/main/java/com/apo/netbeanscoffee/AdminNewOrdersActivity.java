@@ -25,9 +25,8 @@ import Model.AdminOrders;
 
 public class AdminNewOrdersActivity extends AppCompatActivity {
 
-    private RecyclerView ordersList;
     private DatabaseReference ordersRef;
-
+    private RecyclerView ordersList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,20 +90,14 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                                             String uID = getRef(position).getKey();
 
                                             removeOrder(uID);
-
-
                                         } else {
                                             finish();
                                         }
-
                                     }
                                 });
                                 builder.show();
-
                             }
                         });
-
-
                     }
 
                     @NonNull
@@ -119,8 +112,6 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
 
     }
 
-
-
     public static class AdminOrdersViewHolder extends RecyclerView.ViewHolder{
         public TextView userName, userPhoneNumber, userTotalPrice, userDateTime,userShippingAddress;
         public Button showOrdersBtn;
@@ -133,8 +124,6 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
             userDateTime = itemView.findViewById(R.id.order_date_time);
             userShippingAddress = itemView.findViewById(R.id.order_address_city);
             showOrdersBtn = itemView.findViewById(R.id.show_all_products_btn);
-
-
         }
     }
 
