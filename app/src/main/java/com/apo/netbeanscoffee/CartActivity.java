@@ -89,7 +89,7 @@ public class CartActivity extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull CartViewHolder cartViewHolder, int position, @NonNull final Cart model) {
                         try {
                             cartViewHolder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
-                            cartViewHolder.txtProductPrice.setText("Price = $" + model.getPrice());
+                            cartViewHolder.txtProductPrice.setText("Price = " + model.getPrice());
                             cartViewHolder.txtProductName.setText(model.getPname());
 
                             int oneTypeTotalProduct = (Integer.valueOf(model.getPrice())) * Integer.valueOf(model.getQuantity());
@@ -172,7 +172,7 @@ public class CartActivity extends AppCompatActivity {
 
                             if (shippingState.equals("shipped")){
 
-                                txtTotalAmount.setText("Dear " + userName + "\n your order has been shipped successfully.");
+                                txtTotalAmount.setText("Dear " + userName + " your order has been shipped.");
                                 recyclerView.setVisibility(View.GONE);
                                 txtMsg1.setVisibility(View.VISIBLE);
                                 txtMsg1.setText("Your order has been shipped to the provided address. Thank you for doing business with Netbeans Coffee!");

@@ -20,6 +20,8 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+
 import Model.AdminOrders;
 
 public class AdminOrdersActivity extends AppCompatActivity {
@@ -85,10 +87,12 @@ public class AdminOrdersActivity extends AppCompatActivity {
                                     public void onClick(DialogInterface dialog, int which) {
 
                                         if (which == 0){
-
                                             String uID = getRef(position).getKey();
 
-                                            removeOrder(uID);
+                                            HashMap<String, Object> ordersMap = new HashMap<>();
+                                            ordersMap.put("state","shipped");
+                                            FirebaseDatabase.getInstance().getReference("Orders").child(uID).updateChildren(ordersMap);
+                                            //removeOrder(uID);
                                         } else {
                                             finish();
                                         }
