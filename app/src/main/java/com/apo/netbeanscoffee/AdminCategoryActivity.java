@@ -41,7 +41,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         checkOrdersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminNewOrdersActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminOrdersActivity.class);
                 startActivity(intent);
 
             }
@@ -59,7 +59,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         cups.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddProductActivity.class);
                 intent.putExtra("category","Cups");
                 startActivity(intent);
 
@@ -70,7 +70,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddProductActivity.class);
                 intent.putExtra("category","Creamer");
                 startActivity(intent);
             }
@@ -79,7 +79,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         baggedCoffee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddProductActivity.class);
                 intent.putExtra("category","Bagged Coffee");
                 startActivity(intent);
             }
@@ -88,7 +88,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         combos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddProductActivity.class);
                 intent.putExtra("category","Combos");
                 startActivity(intent);
             }
@@ -97,7 +97,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         shirts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddProductActivity.class);
                 intent.putExtra("category","Shirts");
                 startActivity(intent);
             }
@@ -106,7 +106,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         giftCards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddProductActivity.class);
                 intent.putExtra("category","Gift Cards");
                 startActivity(intent);
             }

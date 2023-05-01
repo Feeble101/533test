@@ -18,7 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ForgotAndChangePasswordActivity extends AppCompatActivity {
+public class ForgotPasswordActivity extends AppCompatActivity {
     private EditText edtMode;
     private TextView txtMode;
     private Button submit;
@@ -82,9 +82,9 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(ForgotAndChangePasswordActivity.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ForgotPasswordActivity.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(ForgotAndChangePasswordActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ForgotPasswordActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                         }
                         PD.dismiss();
                     }
@@ -101,9 +101,9 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ForgotAndChangePasswordActivity.this, "Password is updated!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ForgotPasswordActivity.this, "Password is updated!", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(ForgotAndChangePasswordActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ForgotPasswordActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
                                 }
                                 PD.dismiss();
                             }
@@ -121,9 +121,9 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ForgotAndChangePasswordActivity.this, "Email address is updated.", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ForgotPasswordActivity.this, "Email address is updated.", Toast.LENGTH_LONG).show();
                                 } else {
-                                    Toast.makeText(ForgotAndChangePasswordActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ForgotPasswordActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
                                 }
                                 PD.dismiss();
                             }
@@ -138,9 +138,9 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(ForgotAndChangePasswordActivity.this, "Your profile has been deleted", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ForgotPasswordActivity.this, "Your profile has been deleted", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(ForgotAndChangePasswordActivity.this, "We failed to delete your account!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ForgotPasswordActivity.this, "We failed to delete your account!", Toast.LENGTH_SHORT).show();
                                 }
                                 PD.dismiss();
                             }

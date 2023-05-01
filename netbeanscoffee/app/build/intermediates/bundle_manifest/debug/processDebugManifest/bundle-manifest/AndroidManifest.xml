@@ -29,10 +29,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.apo.netbeanscoffee.ForgotAndChangePasswordActivity" />
-        <activity android:name="com.apo.netbeanscoffee.AdminUserProductsActivity" />
-        <activity android:name="com.apo.netbeanscoffee.AdminNewOrdersActivity" />
-        <activity android:name="com.apo.netbeanscoffee.ConfirmFinalOrderActivity" />
+        <activity android:name="com.apo.netbeanscoffee.ForgotPasswordActivity" />
+        <activity android:name="com.apo.netbeanscoffee.AdminProductsActivity" />
+        <activity android:name="com.apo.netbeanscoffee.AdminOrdersActivity" />
+        <activity android:name="com.apo.netbeanscoffee.OrderConfirmationActivity" />
         <activity android:name="com.apo.netbeanscoffee.CartActivity" />
         <activity android:name="com.apo.netbeanscoffee.ProductDetailsActivity" />
         <activity
@@ -42,7 +42,7 @@
         <activity android:name="com.apo.netbeanscoffee.SettingsActivity" />
         <activity android:name="com.apo.netbeanscoffee.AdminCategoryActivity" />
         <activity android:name="com.apo.netbeanscoffee.AdminLoginActivity" />
-        <activity android:name="com.apo.netbeanscoffee.AdminAddNewProductActivity" />
+        <activity android:name="com.apo.netbeanscoffee.AdminAddProductActivity" />
         <activity android:name="com.apo.netbeanscoffee.RegisterActivity" />
         <activity android:name="com.apo.netbeanscoffee.LoginActivity" />
         <activity android:name="com.apo.netbeanscoffee.MainActivity" >

@@ -33,7 +33,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 
-public class AdminAddNewProductActivity extends AppCompatActivity {
+public class AdminAddProductActivity extends AppCompatActivity {
 
     private String productRandomKey,downLoadImageUrl;
     private StorageReference productImagesRef;
@@ -153,13 +153,13 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 String message = e.toString();
-                Toast.makeText(AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminAddProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                 loadingBar.dismiss();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(AdminAddNewProductActivity.this, "Product Image uploaded Successfully....", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AdminAddProductActivity.this, "Product Image uploaded Successfully....", Toast.LENGTH_SHORT).show();
 
                 Task<Uri> uriTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                     @Override
@@ -177,7 +177,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()){
                             downLoadImageUrl = task.getResult().toString();
-                            Toast.makeText(AdminAddNewProductActivity.this, "got the Product image Url Successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminAddProductActivity.this, "got the Product image Url Successfully...", Toast.LENGTH_SHORT).show();
 
                             saveProductInfoToDatabase();
                         }
@@ -207,16 +207,16 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Intent intent = new Intent(AdminAddNewProductActivity.this,AdminCategoryActivity.class);
+                            Intent intent = new Intent(AdminAddProductActivity.this,AdminCategoryActivity.class);
                             startActivity(intent);
                             loadingBar.dismiss();
-                            Toast.makeText(AdminAddNewProductActivity.this, "Product is added successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminAddProductActivity.this, "Product is added successfully...", Toast.LENGTH_SHORT).show();
                         }
 
                         else{
                             loadingBar.dismiss();
                             String message = task.getException().toString();
-                            Toast.makeText(AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminAddProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

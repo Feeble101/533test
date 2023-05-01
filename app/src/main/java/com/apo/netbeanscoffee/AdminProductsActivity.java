@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import Model.Cart;
 
-public class AdminUserProductsActivity extends AppCompatActivity {
+public class AdminProductsActivity extends AppCompatActivity {
 
     private RecyclerView productsList;
     RecyclerView.LayoutManager layoutManager;

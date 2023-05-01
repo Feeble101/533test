@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import Model.AdminOrders;
 
-public class AdminNewOrdersActivity extends AppCompatActivity {
+public class AdminOrdersActivity extends AppCompatActivity {
 
     private DatabaseReference ordersRef;
     private RecyclerView ordersList;
@@ -61,7 +61,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
                                 String uID = getRef(position).getKey();
-                                Intent intent = new Intent(AdminNewOrdersActivity.this,AdminUserProductsActivity.class);
+                                Intent intent = new Intent(AdminOrdersActivity.this, AdminProductsActivity.class);
                                 intent.putExtra("uid",uID);
                                 startActivity(intent);
 
@@ -78,7 +78,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                                                 "No"
                                         };
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(AdminNewOrdersActivity.this);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(AdminOrdersActivity.this);
                                 builder.setTitle("Have you shipped this order products?");
                                 builder.setItems(options, new DialogInterface.OnClickListener() {
                                     @Override

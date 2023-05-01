@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class ConfirmFinalOrderActivity extends AppCompatActivity {
+public class OrderConfirmationActivity extends AppCompatActivity {
 
     private String totalAmount = "";
     private EditText nameEditText, phoneEditText, addressEditText, cityEditText;
@@ -105,8 +105,8 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(ConfirmFinalOrderActivity.this, "your order has been placed successfully", Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(ConfirmFinalOrderActivity.this,HomeActivity.class);
+                                        Toast.makeText(OrderConfirmationActivity.this, "your order has been placed successfully", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(OrderConfirmationActivity.this,HomeActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
                                         finish();

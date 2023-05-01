@@ -62,7 +62,7 @@ public class CartActivity extends AppCompatActivity {
                 } catch (NumberFormatException e){
                     return;
                 }
-                Intent intent = new Intent(CartActivity.this,ConfirmFinalOrderActivity.class);
+                Intent intent = new Intent(CartActivity.this, OrderConfirmationActivity.class);
                 intent.putExtra("Order Details",String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
