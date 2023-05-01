@@ -53,6 +53,7 @@
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         android:padding="20dp"
+        android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
         android:textSize="19sp"
         android:textStyle="bold" />
@@ -97,7 +98,8 @@
         android:text="@string/user_sign_up"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/admin_register_btn"
