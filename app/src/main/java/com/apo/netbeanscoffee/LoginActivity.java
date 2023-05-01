@@ -58,8 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (!task.isSuccessful()){
-                                    Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
-                                    Log.v("error", task.getResult().toString());
+                                    Toast.makeText(LoginActivity.this, "Authentication Failed: Username or Password Incorrect.", Toast.LENGTH_SHORT).show();
                                 } else{
                                     Toast.makeText(LoginActivity.this,"You logged in successfully",Toast.LENGTH_LONG).show();
                                     loadingBar.dismiss();

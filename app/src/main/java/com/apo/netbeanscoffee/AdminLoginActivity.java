@@ -55,26 +55,21 @@ public class AdminLoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (!task.isSuccessful()){
-                                    Toast.makeText(AdminLoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
-                                    Log.v("error", task.getResult().toString());
+                                    Toast.makeText(AdminLoginActivity.this, "Authentication Failed: invalid username or password", Toast.LENGTH_SHORT).show();
                                 } else{
                                     Toast.makeText(AdminLoginActivity.this,"You logged in successfully",Toast.LENGTH_LONG).show();
                                     loadingBar.dismiss();
                                     Intent intent = new Intent(AdminLoginActivity.this,AdminCategoryActivity.class);
-//                                    Users users = new Users(email,password);
-//                                    Prevalent.currentOnLineUsers = users;
+//
                                     startActivity(intent);
-
                                 }
 
                                 loadingBar.dismiss();
-
                             }
                         });
                     } else{
                         Toast.makeText(AdminLoginActivity.this,"All fields are mandatory",Toast.LENGTH_LONG).show();
                     }
-
                 } catch (Exception e){
                     e.printStackTrace();
                 }

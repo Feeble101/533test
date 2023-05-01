@@ -82,9 +82,10 @@ public class RegisterActivity extends AppCompatActivity {
                                     }
                                 });
                     } else {
-                        Toast.makeText(RegisterActivity.this, "All Fields are mandatory", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, "All text fields are mandatory", Toast.LENGTH_LONG).show();
                     }
                 } catch (Exception e) {
+                    Toast.makeText(RegisterActivity.this,"Email or password isn't valid",Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
             }
@@ -130,10 +131,11 @@ public class RegisterActivity extends AppCompatActivity {
                         });
 
                     } else {
-                        Toast.makeText(RegisterActivity.this, "All Fields are mandatory", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, "All text fields are mandatory", Toast.LENGTH_LONG).show();
                     }
 
                 } catch (Exception e){
+                    Toast.makeText(RegisterActivity.this,"Email or password isn't valid",Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
             }
