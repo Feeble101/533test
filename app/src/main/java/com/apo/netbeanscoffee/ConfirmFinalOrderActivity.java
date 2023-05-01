@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.apo.netbeanscoffee.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,7 +29,7 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirm_final_order);
+        setContentView(R.layout.order_confirmation_activity);
 
         //totalAmount = getIntent().getStringExtra("Total Price");
         //Toast.makeText(this, "Total Price = " + totalAmount, Toast.LENGTH_SHORT).show();

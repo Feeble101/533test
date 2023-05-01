@@ -9,8 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.apo.netbeanscoffee.R;
-
 public class AdminCategoryActivity extends AppCompatActivity {
 
     private ImageView cups, creamer;
@@ -25,7 +23,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_category);
+        setContentView(R.layout.category_admin_activity);
 
         logOutBtn = (Button) findViewById(R.id.admin_logout_btn);
         checkOrdersBtn = (Button) findViewById(R.id.check_orders_btn);

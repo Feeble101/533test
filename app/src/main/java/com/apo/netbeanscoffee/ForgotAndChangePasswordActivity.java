@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.apo.netbeanscoffee.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -30,7 +29,7 @@ public class ForgotAndChangePasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_and_change_password);
+        setContentView(R.layout.forgot_password_activity);
         PD = new ProgressDialog(this);
         PD.setMessage("Loading...");
         PD.setCancelable(true);

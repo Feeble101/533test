@@ -12,7 +12,6 @@ import android.widget.EditText;
 
 import android.widget.Toast;
 
-import com.apo.netbeanscoffee.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -32,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.user_register_activity);
 
         loadingBar = new ProgressDialog(this);
         loadingBar.setMessage("Loading....");

@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.apo.netbeanscoffee.R;
 import com.apo.netbeanscoffee.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -42,7 +41,7 @@ public class CartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart);
+        setContentView(R.layout.cart_activity);
 
         recyclerView = findViewById(R.id.cart_list);
         recyclerView.setHasFixedSize(true);
@@ -151,7 +150,7 @@ public class CartActivity extends AppCompatActivity {
                     @NonNull
                     @Override
                     public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_items_layout,parent,false);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.items_cart_layout,parent,false);
                         CartViewHolder holder = new CartViewHolder(view);
                         return holder;
                     }

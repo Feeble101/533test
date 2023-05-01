@@ -9,30 +9,30 @@
         android:id="@+id/nav_cart"
         android:name="com.apo.netbeanscoffee.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/gallery_fragment" />
 
     <fragment
         android:id="@+id/nav_orders"
         android:name="com.apo.netbeanscoffee.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/slideshow_fragment" />
     <fragment
         android:id="@+id/nav_category"
         android:name="com.apo.netbeanscoffee.ui.send.SendFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/send_fragment" />
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.apo.netbeanscoffee.ui.tools.ToolsFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/tool_fragment" />
 
 
     <fragment
         android:id="@+id/nav_logout"
         android:name="com.apo.netbeanscoffee.ui.share.ShareFragment"
         android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/share_fragment" />
 
 </navigation>

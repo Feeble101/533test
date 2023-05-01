@@ -3,7 +3,6 @@ package com.apo.netbeanscoffee;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.apo.netbeanscoffee.R;
 import com.apo.netbeanscoffee.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -56,7 +55,7 @@ public class HomeActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_);
+        setContentView(R.layout.home_activity);
 
         productsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
@@ -165,7 +164,7 @@ public class HomeActivity extends AppCompatActivity  {
                     @NonNull
                     @Override
                     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout,parent,false);
+                        View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.products_layout,parent,false);
                         ProductViewHolder holder = new ProductViewHolder(view);
                         return holder;
                     }

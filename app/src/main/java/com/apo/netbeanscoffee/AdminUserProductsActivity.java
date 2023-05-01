@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.apo.netbeanscoffee.R;
 import com.apo.netbeanscoffee.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -28,7 +27,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_user_products);
+        setContentView(R.layout.products_admin_activity);
         userId =  getIntent().getStringExtra("uid");
         productsList = findViewById(R.id.products_list);
         productsList.setHasFixedSize(true);
@@ -60,7 +59,7 @@ public class AdminUserProductsActivity extends AppCompatActivity {
             @NonNull
             @Override
             public CartViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int position) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_items_layout,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.items_cart_layout,parent,false);
                 CartViewHolder holder = new CartViewHolder(view);
                 return holder;
             }

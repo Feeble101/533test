@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.apo.netbeanscoffee.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -31,7 +30,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_new_orders);
+        setContentView(R.layout.admin_view_orders_activity);
 
         ordersRef = FirebaseDatabase.getInstance().getReference("Orders");
 
@@ -103,7 +102,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                     @NonNull
                     @Override
                     public AdminOrdersViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.orders_layout,parent,false);
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_orders,parent,false);
                         return new AdminOrdersViewHolder(view);
                     }
                 };
