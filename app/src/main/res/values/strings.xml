@@ -47,7 +47,7 @@
     <string name="_product_name">Product Name</string>
     <string name="_product_description">Product Description</string>
     <string name="next">Next</string>
-    <string name="total_price">Order Details</string>
+    <string name="total_price">Total Price = </string>
     <string name="other_pname">Product Name</string>
     <string name="product_quantity">Product Quantity</string>
     <string name="p_price">Product Price</string>

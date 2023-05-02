@@ -1,42 +1,50 @@
-package com.apo.netbeanscoffee;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+        package com.apo.netbeanscoffee;
 
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+        import androidx.annotation.NonNull;
+        import androidx.appcompat.app.AlertDialog;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.recyclerview.widget.LinearLayoutManager;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import com.apo.netbeanscoffee.ViewHolder.CartViewHolder;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+        import android.content.DialogInterface;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.Button;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import Model.Cart;
+        import com.apo.netbeanscoffee.ViewHolder.CartViewHolder;
+        import com.firebase.ui.database.FirebaseRecyclerAdapter;
+        import com.firebase.ui.database.FirebaseRecyclerOptions;
+        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.google.android.gms.tasks.Task;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseError;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+        import com.google.firebase.database.ValueEventListener;
+
+        import java.math.RoundingMode;
+        import java.text.DecimalFormat;
+
+        import Model.Cart;
+        import Prevalent.Prevalent;
 
 public class CartActivity extends AppCompatActivity {
 
-     private RecyclerView recyclerView;
-     private RecyclerView.LayoutManager layoutManager;
-     private Button nextProcessBtn;
-     private TextView txtTotalAmount, txtMsg1 ;
-     private int overTotalPrice = 0;
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private Button nextProcessBtn;
+    private TextView txtTotalAmount, txtMsg1 ;
+    private float overTotalPrice = 0;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,23 +59,25 @@ public class CartActivity extends AppCompatActivity {
         nextProcessBtn = (Button) findViewById(R.id.next_process_btn);
         txtTotalAmount = (TextView) findViewById(R.id.total_price);
         txtMsg1 = (TextView) findViewById(R.id.msg1);
-
         nextProcessBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 try {
-                    txtTotalAmount.setText("Order Details");
+
+                    txtTotalAmount.setText("Total Price = $" + String.valueOf(overTotalPrice));
 
                 } catch (NumberFormatException e){
                     return;
                 }
-                Intent intent = new Intent(CartActivity.this, OrderConfirmationActivity.class);
-                intent.putExtra("Order Details",String.valueOf(overTotalPrice));
+//                txtTotalAmount.setText("Total Price = R" + String.valueOf(overTotalPrice));
+                Intent intent = new Intent(CartActivity.this,OrderConfirmationActivity.class);
+                intent.putExtra("Total Price",String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
             }
         });
+
     }
 
     @Override
@@ -78,9 +88,9 @@ public class CartActivity extends AppCompatActivity {
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference("CartList");
         FirebaseRecyclerOptions<Cart> options =
                 new FirebaseRecyclerOptions.Builder<Cart>()
-                .setQuery(cartListRef.child("UserView")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                        .child("Products"),Cart.class)
+                        .setQuery(cartListRef.child("UserView")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .child("Products"),Cart.class)
                         .build();
 
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter =
@@ -88,15 +98,26 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     protected void onBindViewHolder(@NonNull CartViewHolder cartViewHolder, int position, @NonNull final Cart model) {
                         try {
+
+
                             cartViewHolder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
-                            cartViewHolder.txtProductPrice.setText("Price = " + model.getPrice());
+                            cartViewHolder.txtProductPrice.setText("Price = $" + model.getPrice());
                             cartViewHolder.txtProductName.setText(model.getPname());
 
-                            int oneTypeTotalProduct = (Integer.valueOf(model.getPrice())) * Integer.valueOf(model.getQuantity());
+
+                            float oneTypeTotalProduct = (Float.valueOf(model.getPrice())) * Integer.valueOf(model.getQuantity());
                             overTotalPrice = overTotalPrice + oneTypeTotalProduct;
+                            DecimalFormat df = new DecimalFormat("#.##");
+                            df.setRoundingMode(RoundingMode.DOWN);
+                            float formattedNumber = Float.parseFloat(df.format(overTotalPrice));
+                            overTotalPrice = formattedNumber;
                         } catch(NumberFormatException e){
                             return;
                         }
+
+
+
+
 
                         cartViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -106,7 +127,7 @@ public class CartActivity extends AppCompatActivity {
 
                                                 "Edit",
                                                 "Delete"
-                                };
+                                        };
 
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CartActivity.this);
                                 builder.setTitle("Cart Options:");
@@ -145,6 +166,11 @@ public class CartActivity extends AppCompatActivity {
                                 builder.show();
                             }
                         });
+
+
+
+
+
                     }
 
                     @NonNull
@@ -172,21 +198,25 @@ public class CartActivity extends AppCompatActivity {
 
                             if (shippingState.equals("shipped")){
 
-                                txtTotalAmount.setText("Dear " + userName + " your order has been shipped.");
+                                txtTotalAmount.setText("Dear " + userName + "\n order is shipped successfully.");
                                 recyclerView.setVisibility(View.GONE);
                                 txtMsg1.setVisibility(View.VISIBLE);
-                                txtMsg1.setText("Your order has been shipped to the provided address. Thank you for doing business with Netbeans Coffee!");
+                                txtMsg1.setText("Congratulations, your final order has been Shipped successfully.Soon you will receive your order by your door step ");
                                 nextProcessBtn.setVisibility(View.GONE);
-                                Toast.makeText(CartActivity.this, "You can order again once your previous order has arrived.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CartActivity.this, "You can purchase more products once you receive your first order", Toast.LENGTH_SHORT).show();
 
                             } else if (shippingState.equals("not shipped")){
                                 txtTotalAmount.setText("Shipping State = not shipped");
                                 recyclerView.setVisibility(View.GONE);
                                 txtMsg1.setVisibility(View.VISIBLE);
                                 nextProcessBtn.setVisibility(View.GONE);
-                                Toast.makeText(CartActivity.this, "You can order again once your previous order has arrived.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CartActivity.this, "You can purchase more products once you receive your first order", Toast.LENGTH_SHORT).show();
+
+
                             }
+
                         }
+
                     }
 
                     @Override

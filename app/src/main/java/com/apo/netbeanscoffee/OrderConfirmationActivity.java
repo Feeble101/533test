@@ -31,10 +31,10 @@ public class OrderConfirmationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_confirmation_activity);
 
-        //totalAmount = getIntent().getStringExtra("Total Price");
-        //Toast.makeText(this, "Total Price = " + totalAmount, Toast.LENGTH_SHORT).show();
-        totalAmount = getIntent().getStringExtra("Order Details");
-        Toast.makeText(this, "Order Details", Toast.LENGTH_SHORT).show();
+        totalAmount = getIntent().getStringExtra("Total Price");
+        Toast.makeText(this, "Total Price = $" + totalAmount, Toast.LENGTH_SHORT).show();
+        //totalAmount = getIntent().getStringExtra("Order Details");
+        //Toast.makeText(this, "Order Details", Toast.LENGTH_SHORT).show();
 
         confirmOrderBtn = (Button) findViewById(R.id.confirm_final_order);
         nameEditText = (EditText) findViewById(R.id.shipment_name);
